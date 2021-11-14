@@ -1,4 +1,4 @@
-package com.rapipay.otp_handler.services.util;
+package com.rapipay.otp_handler.util;
 
 import java.util.Properties;
 
@@ -13,7 +13,7 @@ import javax.mail.internet.MimeMessage;
 import com.rapipay.otp_handler.exception.EmailNotSentException;
 import com.rapipay.otp_handler.model.OTP;
 
-public class EmailUtilService {
+public class EmailUtil {
     public void sendEmail(OTP otp) throws EmailNotSentException {
         String to = "luv.dhamija88@gmail.com";
         String from = otp.getUserID();

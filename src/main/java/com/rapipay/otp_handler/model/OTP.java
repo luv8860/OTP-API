@@ -1,26 +1,23 @@
 package com.rapipay.otp_handler.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import net.bytebuddy.utility.RandomString;
-@Entity
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Document("OTP")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class OTP {
 	
 	@Id
 	String userID;
-	
-	@Column(name="otp")
 	String otp;
-	
-	@Column(name="timestamp")	
 	long timestamp;
-
-	@Column(name="order_id")
 	String orderID;
-
-	@Column(name="channel_name")
 	String channelName;
 
 	public OTP() {
@@ -65,8 +62,11 @@ public class OTP {
 	public void setTimestamp() {
 		this.timestamp = System.currentTimeMillis();
 	}
-	public void setOtp(){
-		this.otp=RandomString.make(8);//method to create an otp
+	public void setTimestamp(long a) {
+		this.timestamp = a;
+	}
+	public void setOtp(String otp){
+		this.otp=otp;//method to create an otp
 	}
 	@Override
 	public String toString() {

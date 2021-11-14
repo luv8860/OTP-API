@@ -1,10 +1,9 @@
 package com.rapipay.otp_handler.exception;
 
-public class InvalidEmailIDException extends Exception{
-
+public class OTPGenTime extends Exception{
+    
     @Override
     public String toString() {
-        return "Invalid Email ID";
+        return "Please Request After 2 Minutes";
     }
-    
 }

@@ -12,11 +12,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableAutoConfiguration
 @AutoConfigurationPackage
-@SpringBootApplication
+@SpringBootApplication()
 public class OtpHandlerApplication {
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(OtpHandlerApplication.class, args);
 	}
-
 }
