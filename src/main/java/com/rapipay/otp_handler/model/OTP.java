@@ -20,9 +20,7 @@ public class OTP {
 	String orderID;
 	String channelName;
 
-	public OTP() {
-		super();
-	}
+	
 	public OTP(String userID,  String orderID, String channelName) {
 		this.userID = userID;
 		this.orderID = orderID;
